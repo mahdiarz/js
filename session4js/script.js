@@ -1,13 +1,20 @@
-let input = document.getElementById("age");
+let input = document.getElementById("password");
 let para = document.getElementById("demo");
-function check() {
-  let userage = parseInt(input.value);
+let user = document.getElementById("username");
+function login() {
+  let userpass = input.value;
+  let username = user.value;
+  if (username == 'mahdiar') {
+    if ( userpass == "m2034") {
+        para.innerText = "درسته";
+    }else{
+      para.innerText = "غلطه";
 
-  if (  userage < 18){
-    para.innerText="!سن شما برای خرید بلیط مناسب نمیباشد"
+    }
+  
   }
-  else{
-    para.innerText="خوش آمدید!"
-  };
+  else {
+    para.innerText = "غلطه";
+  }
 
 }
